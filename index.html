@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <template id="message_submit">
+        <p class="dialog__message-text"></p>
+        <span class="dialog__message-time"></span>
+    </template>
+
+    <div class="background-modal_window"></div>
+    <main class="main">
+        <div class="dialog">
+            <div class="container">
+                <div class="dialog__top">
+                    <button class="dialog__btn-settings">Настройки</button>
+                    <button class="dialog__btn-exit">Выйти</button>
+                </div>
+                <div class="dialog__message-box">
+                    <ul class="dialog__message-list"></ul>
+                </div>
+                <form class="dialog__bottom">
+                    <input type="text" class="dialog__message-input" placeholder="Введите сообщение..">
+                    <button class="dialog__message-submit">-></button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-windows">
+            <div class="settings modal-window">
+                <div class="settings-container">
+                    <div class="settings__top">
+                        <p class="settings__text">Настройки</p>
+                        <button class="settings__close"></button>
+                    </div>
+                    <p class="settings__text">Имя в чате</p>
+                    <form class="settings__form">
+                        <input type="text" class="settings__input" placeholder="Введите имя">
+                        <button class="settings__submit">-></button>
+                    </form>
+                </div>
+            </div>
+            <div class="authorization modal-window">
+                <div class="authorization-container">
+                    <div class="authorization__top">
+                        <p class="authorization__text">Авторизация</p>
+                        <button class="authorization__close"></button>
+                    </div>
+                    <p class="authorization__text">Почта:</p>
+                    <form class="authorization__form">
+                        <input type="email" class="authorization__input">
+                        <button class="authorization__submit">Получить код</button>
+                    </form>
+                    <button class="authorization__token-btn">Ввести код</button>
+                </div>
+            </div>
+            <div class="accept modal-window">
+                <div class="accept-container">
+                    <div class="accept__top">
+                        <p class="accept__text">Подтверждение</p>
+                        <button class="accept__close"></button>
+                    </div>
+                    <p class="accept__text">Код:</p>
+                    <form class="accept__form">
+                        <input type="text" class="accept__input">
+                        <button class="accept__submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/view.js" type="module" defer></script>
+    <script src="js/modalWindowView.js" type="module" defer></script>
+</body>
+</html>
